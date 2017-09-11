@@ -23,11 +23,11 @@ def show(mini_board):
 show(board)
 
 while True:
-    print 'please intert key..'
-    print 'f -> fill q -> quit'
+    print('please intert key..')
+    print('f -> fill q -> quit')
 
     # 사용자에게 커맨드를 입력 받음
-    cmd = raw_input()
+    cmd = input()
 
     if cmd == 'f':
         print 'insert x, y index & color'
@@ -39,11 +39,11 @@ while True:
         try:
             fill(board, x, y, color)
         except:
-            print 'invalid index'
+            print('invalid index')
 
         show(board)
 
     elif cmd == 'q': # q인 경우 프로그램 종료
         break
     else:
-        print 'no command available'
+        print('no command available')

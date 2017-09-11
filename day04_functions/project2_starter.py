@@ -9,8 +9,8 @@ import random
 def show_puzzle(puzzle):
     for row in puzzle:
         for item in row:
-            print item,
-        print
+            print(item, end=' ')
+        print()
 
 # 퍼즐을 생성한다.
 # 퍼즐은 동적으로 생성되며, 2차원 리스트 형태를 갖는다
@@ -62,7 +62,7 @@ def move_by_index(puzzle, i, j):
 
 
 # 퍼즐 생성
-size = int(raw_input(' -> please insert puzzle size : '))
+size = int(input(' -> please insert puzzle size : '))
 puzzle = initiate_puzzle(size)
 
 # 연습문제) -> 아래와 같이 복사하는 이유는?
@@ -76,7 +76,7 @@ show_puzzle(puzzle)
 
 # 퍼즐 풀기
 while not is_done(puzzle, complete):
-    num = int(raw_input(' -> select a number to move : '))
+    num = int(input(' -> select a number to move : '))
     # 움직일 수 선택하기
     move_by_number(puzzle, num)
 
@@ -88,4 +88,4 @@ while not is_done(puzzle, complete):
     # 움직인 이후 퍼즐 상태 보기
     show_puzzle(puzzle)
 
-print '\nyou solved the puzzle!'
+print('\nyou solved the puzzle!')
