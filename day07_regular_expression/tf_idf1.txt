@@ -1,0 +1,6 @@
+Python is very concise language compared to the other ones
+Python has powerful tools and the tools are very nice
+The tools include debugger profiler and the compiler
+Python is used widely for many reasons and mostly for web apis
+The apis built from python is about 2 times faster than ruby
+python is language and also a specification python can be implemented in any language
