@@ -6,8 +6,8 @@ import numpy as np
 def show_puzzle(puzzle):
     for i in range(len(puzzle)):
         for j in range(len(puzzle[0])):
-            print '{:2}'.format(puzzle[i][j]),
-        print
+            print('{:3}'.format(puzzle[i][j]), sep=' ', end='')
+        print()
 
 def initiate_puzzle(size):
     puzzle = []
@@ -81,10 +81,10 @@ def move_by_index(puzzle, i, j):
             puzzle[i][j], puzzle[new_i][new_j] = puzzle[new_i][new_j], puzzle[i][j]
             break
     else:
-        print 'sorry, you cannot move that number'
+        print('sorry, you cannot move that number')
 
 # 퍼즐 생성
-size = int(raw_input(' -> please insert puzzle size : '))
+size = int(input(' -> please insert puzzle size : '))
 puzzle = initiate_puzzle3(size)
 complete = [row[:] for row in puzzle]
 
@@ -97,9 +97,9 @@ show_puzzle(puzzle)
 # 퍼즐 풀기
 while not is_done(puzzle, complete):
     try:
-        num = int(raw_input(' -> select a number to move : '))
+        num = int(input(' -> select a number to move : '))
     except:
-        print 'give me a valid number!'
+        print('give me a valid number!')
         continue
     # 움직일 수 선택하기
     move_by_number(puzzle, num)
@@ -113,4 +113,4 @@ while not is_done(puzzle, complete):
     # 움직인 이후 퍼즐 상태 보기
     show_puzzle(puzzle)
 
-print '\nyou solved the puzzle!'
+print('\nyou solved the puzzle!')

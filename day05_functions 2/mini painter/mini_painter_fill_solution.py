@@ -47,29 +47,29 @@ def fill_dfs(mini_board, x, y, color):
 def show(mini_board):
     for row in mini_board:
         for item in row:
-            print item,
-        print
+            print(item, sep=' ', end='')
+        print()
 
 show(board)
 
 while True:
-    print 'please intert key..'
-    print 'f -> fill q -> quit'
+    print('please intert key..')
+    print('f -> fill q -> quit')
 
-    cmd = raw_input()
+    cmd = input()
     if cmd == 'f':
-        print 'insert x, y index & color'
-        index = raw_input()
+        print('insert x, y index & color')
+        index = input()
         x, y, color = map(int, index.split(' '))
 
         try:
             fill_bfs(board, x, y, color)
         except:
-            print 'invalid index'
+            print('invalid index')
 
         show(board)
 
     elif cmd == 'q':
         break
     else:
-        print 'no command available'
+        print('no command available')
