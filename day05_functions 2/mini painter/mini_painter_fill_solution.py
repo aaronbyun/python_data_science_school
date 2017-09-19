@@ -23,7 +23,8 @@ def fill_bfs(mini_board, x, y, color):
              new_x = cx + dx
              new_y = cy + dy
 
-             if 0 <= new_x < len(mini_board) and 0 <= new_y < len(mini_board[0]) \
+             if 0 <= new_x < len(mini_board) \
+                and 0 <= new_y < len(mini_board[0]) \
                 and org_color == mini_board[new_x][new_y]:
                 queue.append((new_x, new_y))
 
@@ -42,7 +43,7 @@ def fill_dfs(mini_board, x, y, color):
 
         if 0 <= new_x < len(mini_board) and 0 <= new_y < len(mini_board[0]) \
             and org_color == mini_board[new_x][new_y]:
-            fill(mini_board, new_x, new_y, color)
+            fill_dfs(mini_board, new_x, new_y, color)
 
 def show(mini_board):
     for row in mini_board:

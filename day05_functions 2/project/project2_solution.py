@@ -38,7 +38,7 @@ def shuffle_puzzle(puzzle):
     dys = [0, 1,  0, -1]
 
     cnt = 0
-    while cnt <= 300:
+    while cnt <= 2:
         rnd = random.randint(0, 3)
         dx = dxs[rnd]
         dy = dys[rnd]
@@ -86,7 +86,8 @@ def move_by_index(puzzle, i, j):
 # 퍼즐 생성
 size = int(input(' -> please insert puzzle size : '))
 puzzle = initiate_puzzle3(size)
-complete = [row[:] for row in puzzle]
+complete = puzzle[:][:]
+#complete = [row[:] for row in puzzle]
 
 # 퍼즐 섞기
 shuffle_puzzle(puzzle)
